@@ -1,0 +1,104 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Tools – by Swapan Baroi</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom right, #00416A, #E4E5E6);
+      color: #fff;
+    }
+    .container {
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 30px;
+    }
+    .tool-button {
+      display: block;
+      width: 90%;
+      max-width: 400px;
+      margin: 10px auto;
+      padding: 15px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #fff;
+      background-color: #00aaff;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .tool-button:hover {
+      background-color: #0077cc;
+    }
+    .section {
+      background-color: #ffffff;
+      color: #000;
+      margin: 30px auto;
+      padding: 20px;
+      max-width: 500px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    label, input {
+      display: block;
+      margin: 10px auto;
+      font-size: 16px;
+    }
+    input[type="file"] {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 5px;
+    }
+    input[type="number"], input[type="submit"] {
+      width: 80%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    input[type="submit"] {
+      background-color: #00aaff;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>📱 Smart Tools – by Swapan Baroi</h1>
+    <button class="tool-button">🎾 Resize</button>
+    <button class="tool-button">🎂 Age Calc</button>
+    <button class="tool-button">📸 Img to PDF</button>
+    <button class="tool-button">📊 Compress</button>
+    <button class="tool-button">♻️ Convert</button>
+    <button class="tool-button">🎾 Resize + Size</button>
+    <button class="tool-button">🧬 BG Remove</button>
+    <button class="tool-button">🏛️ Add BG</button>
+    <button class="tool-button">🌜 Dark Mode</button>
+  </div>  <div class="section">
+    <h2>🎾 Resize Image</h2>
+    <form>
+      <input type="file" accept="image/*">
+      <label for="width">Width:</label>
+      <input type="number" id="width" name="width">
+      <label for="height">Height:</label>
+      <input type="number" id="height" name="height">
+      <input type="submit" value="Resize">
+    </form>
+  </div>  <script>
+    // Placeholder for feature toggles (e.g., Dark Mode)
+    document.querySelector('.tool-button:last-child').addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      document.body.style.background = document.body.classList.contains('dark')
+        ? '#000' : 'linear-gradient(to bottom right, #00416A, #E4E5E6)';
+      document.body.style.color = document.body.classList.contains('dark') ? '#fff' : '#000';
+    });
+  </script></body>
+</html>
